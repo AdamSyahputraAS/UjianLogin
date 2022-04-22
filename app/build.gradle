@@ -56,14 +56,20 @@ dependencies {
     implementation 'org.glassfish:javax.annotation:10.0-b28'
 }
 
-////https://github.com/bumptech/glide
-//dependencies {
-//    implementation 'com.github.bumptech.glide:glide:4.13.0'
-//    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
-//}
+//https://github.com/bumptech/glide
+dependencies {
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+}
 
 //imagepicker
-//dependencies {
-//    implementation 'com.github.Drjacky:ImagePicker:2.1.15'
-//}
+dependencies {
+    implementation 'com.github.Drjacky:ImagePicker:2.1.15'
 
+}
+
+//gps
+dependencies {
+    implementation 'com.github.anirudhmpai:EasyLocationFetch:2.1.1'
+    implementation 'com.android.volley:volley:1.2.1'
+}

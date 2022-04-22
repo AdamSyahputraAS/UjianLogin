@@ -22,28 +22,6 @@ data class userResponse (
 ) : Parcelable
 
 @Parcelize
-data class DataTest(
-
-    @field:SerializedName("table_user")
-    val tableUser: List<TableUserItem?>? = null
-) : Parcelable
-
-@Parcelize
-data class TabelUser(
-
-    @field:SerializedName("password")
-    val password: String? = null,
-
-    @field:SerializedName("id")
-    val id: String? = null,
-
-    @field:SerializedName("username")
-    val username: String? = null
-
-):Parcelable
-
-
-@Parcelize
 data class AbsenItem(
 
     @field:SerializedName("image")

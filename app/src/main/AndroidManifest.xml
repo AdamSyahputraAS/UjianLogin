@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adl.ujianlogin">
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -16,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UjianLogin"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".checkin"
+            android:exported="false" />
         <activity
             android:name=".main_menu"
             android:exported="false" />
