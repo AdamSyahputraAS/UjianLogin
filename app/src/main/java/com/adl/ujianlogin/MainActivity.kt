@@ -7,7 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import com.adl.ujianlogin.Services.retrofit
 import com.adl.ujianlogin.model.UserAPI
-import com.adl.ujianlogin.model.userRequest
+
 import com.adl.ujianlogin.model.userResponse
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             login()
         }
     }
-
     fun login(){
         retrofit().getUser().getlogin(inputUsername.text.toString()).enqueue(object: Callback<userResponse>{
             override fun onResponse(
@@ -44,8 +43,8 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this@MainActivity,"Username or Password is doesn't found",Toast.LENGTH_LONG).show()
                     }else{
 
-                        var currentUser = response.body()?.data?.loginabsen?.get(0)
-                        if(currentUser?.password == inputUsername.text.toString()){
+                        var currentUser = response.body()?.data?.tableUser?.get(1)
+                        if(currentUser?.username == inputUsername.text.toString()){
                             Toast.makeText(this@MainActivity,"Login Successfull",Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@MainActivity, main_menu::class.java)
                             intent.putExtra("data", currentUser)

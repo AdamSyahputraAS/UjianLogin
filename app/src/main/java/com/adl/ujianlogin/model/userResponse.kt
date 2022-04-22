@@ -1,22 +1,74 @@
 package com.adl.ujianlogin.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
-class userResponse {
+@Parcelize
+data class userResponse (
 
-    @SerializedName("data")
-    @Expose
-    var data: User?= null
+    @field:SerializedName("total")
+    val total: Int? = null,
 
-    class User{
-        @SerializedName("username")
-        @Expose
-        var username: String?=null
+    @field:SerializedName("data")
+    val data: Data? = null,
 
-        @SerializedName("password")
-        @Expose
-        var token: String?=null
+    @field:SerializedName("message")
+    val message: String? = null,
 
-    }
-}
+    @field:SerializedName("status")
+    val status: Boolean? = null
+) : Parcelable
+
+@Parcelize
+data class DataTest(
+
+    @field:SerializedName("table_user")
+    val tableUser: List<TableUserItem?>? = null
+) : Parcelable
+
+@Parcelize
+data class TabelUser(
+
+    @field:SerializedName("password")
+    val password: String? = null,
+
+    @field:SerializedName("id")
+    val id: String? = null,
+
+    @field:SerializedName("username")
+    val username: String? = null
+
+):Parcelable
+
+
+@Parcelize
+data class AbsenItem(
+
+    @field:SerializedName("image")
+    val image: String? = null,
+
+    @field:SerializedName("logout")
+    val logout: String? = null,
+
+    @field:SerializedName("location")
+    val location: String? = null,
+
+    @field:SerializedName("id")
+    val id: String? = null,
+
+    @field:SerializedName("login")
+    val login: String? = null,
+
+    @field:SerializedName("username")
+    val username: String? = null
+) : Parcelable
+
+@Parcelize
+data class Dataa(
+
+    @field:SerializedName("absen")
+    val absen: List<AbsenItem?>? = null
+) : Parcelable
+

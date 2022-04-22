@@ -8,19 +8,16 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Data(
 
-    @field:SerializedName("table_user")
+    @field:SerializedName("loginabsen")
     val tableUser: List<TableUserItem?>? = null
 ) : Parcelable
 
 @Parcelize
 data class TableUserItem(
-
-    @field:SerializedName("password")
-    val password: String? = null,
-
     @field:SerializedName("id")
     val id: String? = null,
-
     @field:SerializedName("username")
-    val username: String? = null
+    val username: String? = null,
+    @field:SerializedName("password")
+    val password: String? = null
 ) : Parcelable

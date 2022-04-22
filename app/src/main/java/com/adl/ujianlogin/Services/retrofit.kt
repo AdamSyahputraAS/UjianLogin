@@ -24,6 +24,7 @@ class retrofit {
         val gson = GsonBuilder().setLenient().create()
         return Retrofit.Builder()
             .baseUrl("http://192.168.1.129/cicool/")
+            .client(getInterceptor())
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }
